@@ -5,6 +5,7 @@ echo "Fetching Dependencies for Sheila.py"
 pip install pyttsx
 pip install SpeechRecognition
 pip install weather-api
+pip install Pillow
 
 #Secondary Dependencies
 sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
