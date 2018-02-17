@@ -6,6 +6,7 @@ pip install pyttsx
 pip install SpeechRecognition
 pip install weather-api
 pip install Pillow
+pip install rpi_backlight
 
 #Secondary Dependencies
 sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
