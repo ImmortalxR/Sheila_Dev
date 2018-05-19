@@ -13,6 +13,7 @@ sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ff
 pip install pyaudio
 pip install google-api-python-client
 pip install monotonic
+sudo apt-get install flac
 
 #Will eventually add section to compile 
 #OPENCV2 when facial recognition is added again
