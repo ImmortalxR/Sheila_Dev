@@ -49,12 +49,17 @@ def Sheila_Core():
         os.system('cls' if os.name == 'nt' else 'clear')
 
         #Quick message at the start to record start time
-        say("Hello, booting up, the time is "+str(datetime.now()))
+        bootTime=datetime.now()
+        say("Hello, booting up, the time is " + str(bootTime.hour) + " " + str(bootTime.minute))
         
         #Setup of flags/initialized classes that will be used later
         weather = Weather()
         alarmFlag = True
         detFlag = False
+        
+        locale = weather.lookup(12588678)
+        condition = locale.condition()     
+        say("The weather is currently " + condition.text() + " and it is currently " + condition.temp() + " degrees celsius.")
         
         while True:
             
@@ -84,7 +89,9 @@ def Sheila_Core():
             fullVOSplit = inputVO.split()
             for word in fullVOSplit:
                 if word.lower() == "sheila" and detFlag is False:
+                    print("--------------------------------------------------")
                     print("...I heard my name...")
+                    print("--------------------------------------------------")
                     detFlag = True
                     break
                 elif detFlag is True:
@@ -95,7 +102,7 @@ def Sheila_Core():
 #                print ("---Attempting Face Detection---")
 #                alDet = FR.detFaceNow(False)
 #                if alDet is True:
-#                    print ("...I see you...")
+#                    print ("...I voEnginesee you...")
 #                    say('I think I see you! Would you like to chat?')
 #                    detFlag = True
 #                    minutes = 0
@@ -135,11 +142,13 @@ def say(whatToSay):
     blAdjust(255)
     voEngine = pyttsx.init()
     voEngine.setProperty('voice', 'english+f3')
-    voEngine.setProperty('rate', 135)
+    voEngine.setProperty('rate', 180)
     voEngine.setProperty('volume', 0.3)  
     voEngine.say(whatToSay)
+    print("--------------------------------------------------")
     print whatToSay
-    voEngine.runAndWait()
+    print("--------------------------------------------------")
+    talkingNOW = voEngine.runAndWait()
     blAdjust(11)
 
 Sheila_Core()
