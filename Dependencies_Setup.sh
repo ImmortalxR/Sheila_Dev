@@ -2,7 +2,9 @@
 echo "Fetching Dependencies for Sheila.py"
 
 #Primary Dependencies
+sudo apt-get update
 sudo apt-get install python-imaging-tk
+sudo apt-get install espeak
 pip install pyttsx
 pip install SpeechRecognition
 pip install weather-api
