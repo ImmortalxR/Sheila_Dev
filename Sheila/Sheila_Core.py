@@ -58,8 +58,8 @@ def Sheila_Core():
         detFlag = False
         
         locale = weather.lookup(12588678)
-        condition = locale.condition()     
-        say("The weather is currently " + condition.text() + " and it is currently " + condition.temp() + " degrees celsius.")
+        condition = locale.condition     
+        say("The weather is currently " + condition.text + " and it is currently " + condition.temp + " degrees celsius.")
         
         while True:
             

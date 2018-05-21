@@ -13,10 +13,9 @@ def recordAndInterpret():
     rec = sr.Recognizer()
     while True:       
         with sr.Microphone() as source:
-            rec.adjust_for_ambient_noise(source, duration=2)
-            rec.dynamic_energy_threshold = True
+            rec.energy_threshold = 600
             print("--------------------------------------------------")
-            print("The mice energy threshold is set to: " + str(rec.energy_threshold))
+            print("The microphone energy threshold is set to: " + str(rec.energy_threshold))
             print("--------------------------------------------------")
             audio = rec.listen(source)
         try:
