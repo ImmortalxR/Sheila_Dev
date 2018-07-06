@@ -58,7 +58,8 @@ def Sheila_Core():
         detFlag = False
         
         locale = weather.lookup(12588678)
-        condition = locale.condition     
+        condition = locale.condition
+        time.sleep(2)
         say("The weather is currently " + condition.text + " and it is currently " + condition.temp + " degrees celsius.")
         
         while True:
@@ -138,14 +139,15 @@ def setupGUI():
 def say(whatToSay):
     blAdjust(255)
     voEngine = pyttsx.init()
-    voEngine.setProperty('voice', 'english+f3')
-    voEngine.setProperty('rate', 150)
+    voEngine.setProperty('voice', 'english+f4')
+    voEngine.setProperty('rate', 125)
     voEngine.setProperty('volume', 0.25)
     voEngine.say(whatToSay)
     print("--------------------------------------------------")
     print whatToSay
     print("--------------------------------------------------")
     talkingNOW = voEngine.runAndWait()
+    time.sleep(2)
     blAdjust(11)
 
 Sheila_Core()
