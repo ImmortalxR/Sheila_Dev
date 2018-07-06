@@ -9,14 +9,12 @@ This is Sheila's voice recognition system
 
 import speech_recognition as sr
 
+
 def recordAndInterpret():
     rec = sr.Recognizer()
-    while True:       
+    while True:
         with sr.Microphone() as source:
-            rec.energy_threshold = 600
-            print("--------------------------------------------------")
-            print("The microphone energy threshold is set to: " + str(rec.energy_threshold))
-            print("--------------------------------------------------")
+            rec.adjust_for_ambient_noise(source)
             audio = rec.listen(source)
         try:
             return rec.recognize_google(audio)

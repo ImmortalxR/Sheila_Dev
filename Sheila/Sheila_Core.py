@@ -94,27 +94,20 @@ def Sheila_Core():
                     print("--------------------------------------------------")
                     say("I heard you, you said: " + str(inputVO))
                     detFlag = True
+                    print("--------------------------------------------------")
+                    print("...Detection flag set...")
+                    print("--------------------------------------------------")
                     break
                 elif detFlag is True:
                     pass
-                
-            #If more than 3 minutes have passed and the detection flag is false
-#            if minutes > 3 and detFlag is False:
-#                print ("---Attempting Face Detection---")
-#                alDet = FR.detFaceNow(False)
-#                if alDet is True:
-#                    print ("...I voEnginesee you...")
-#                    say('I think I see you! Would you like to chat?')
-#                    detFlag = True
-#                    minutes = 0
-#                    seconds = 0
-#                    startTime = time.time()  
-#            if minutes > 5:
-#                minutes = 0
-#                seconds = 0
-#                startTime = time.time()  
-#                detFlag = False
-                    
+
+            #If more than 3 minutes have passed, reset detflag
+               if minutes > 3:
+                   minutes = 0
+                   seconds = 0
+                   startTime = time.time()
+                   detFlag = False
+
     except KeyboardInterrupt:
         bl.set_brightness(255, smooth=False, duration = 0.1)
         rootW.destroy()
