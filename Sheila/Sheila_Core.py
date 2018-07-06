@@ -140,7 +140,7 @@ def say(whatToSay):
     blAdjust(255)
     voEngine = pyttsx.init()
     voEngine.setProperty('voice', 'english+f4')
-    voEngine.setProperty('rate', 125)
+    voEngine.setProperty('rate', 135)
     voEngine.setProperty('volume', 0.25)
     voEngine.say(whatToSay)
     print("--------------------------------------------------")
