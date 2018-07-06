@@ -92,6 +92,7 @@ def Sheila_Core():
                     print("--------------------------------------------------")
                     print("...I heard my name...")
                     print("--------------------------------------------------")
+                    say("I heard you, you said: " + fullVOSplit)
                     detFlag = True
                     break
                 elif detFlag is True:

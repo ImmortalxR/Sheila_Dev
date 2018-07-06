@@ -12,8 +12,8 @@ pip install Pillow
 pip install rpi_backlight
 
 #Secondary Dependencies
-sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
-pip install pyaudio
+sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 libav-tools
+sudo apt-get install python-pyaudio
 pip install google-api-python-client
 pip install monotonic
 sudo apt-get install flac
