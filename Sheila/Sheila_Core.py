@@ -139,8 +139,8 @@ def setupGUI():
 def say(whatToSay):
     blAdjust(255)
     voEngine = pyttsx.init()
-    voEngine.setProperty('voice', 'english+f4')
-    voEngine.setProperty('rate', 140)
+    voEngine.setProperty('voice', 'english+f3')
+    voEngine.setProperty('rate', 138)
     voEngine.setProperty('volume', 0.25)
     voEngine.say(whatToSay)
     print("--------------------------------------------------")
