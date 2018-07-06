@@ -95,7 +95,7 @@ def Sheila_Core():
                     say("I heard you, you said: " + str(inputVO))
                     detFlag = True
                     print("--------------------------------------------------")
-                    print("...Detection flag set...")
+                    print("...Detection flag set to True...")
                     print("--------------------------------------------------")
                     break
                 elif detFlag is True:
@@ -107,6 +107,9 @@ def Sheila_Core():
                 seconds = 0
                 startTime = time.time()
                 detFlag = False
+                print("--------------------------------------------------")
+                print("...Detection flag set to False...")
+                print("--------------------------------------------------")
 
     except KeyboardInterrupt:
         bl.set_brightness(255, smooth=False, duration = 0.1)
