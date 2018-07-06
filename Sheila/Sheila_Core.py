@@ -102,11 +102,11 @@ def Sheila_Core():
                     pass
 
             #If more than 3 minutes have passed, reset detflag
-               if minutes > 3:
-                   minutes = 0
-                   seconds = 0
-                   startTime = time.time()
-                   detFlag = False
+            if minutes > 3:
+                minutes = 0
+                seconds = 0
+                startTime = time.time()
+                detFlag = False
 
     except KeyboardInterrupt:
         bl.set_brightness(255, smooth=False, duration = 0.1)
