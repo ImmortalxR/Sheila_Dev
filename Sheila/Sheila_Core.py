@@ -59,7 +59,7 @@ def Sheila_Core():
         
         locale = weather.lookup(12588678)
         condition = locale.condition
-        time.sleep(2)
+        time.sleep(.8)
         say("The weather is currently " + condition.text + " and it is currently " + condition.temp + " degrees celsius.")
         
         while True:
@@ -147,7 +147,7 @@ def say(whatToSay):
     print whatToSay
     print("--------------------------------------------------")
     talkingNOW = voEngine.runAndWait()
-    time.sleep(2)
+    time.sleep(.8)
     blAdjust(11)
 
 Sheila_Core()
