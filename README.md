@@ -8,7 +8,8 @@ X-------------X
 - Raspberry Pi Official 7" Touchscreen
 - Any configurable RPi 3b compatible bluetooth speaker
 - Any configurable RPi 3b compatible USB microphone
-------------------------------------------------------
+
+Alternatives:
 - Alternatively an external soundcard and mic/speaker setup is acceptable
 
 X---------------------------X
