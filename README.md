@@ -14,6 +14,7 @@ X-------------X
 X---------------------------X
 Software Dependencies/Credits
 X---------------------------X
+
 https://github.com/linusg/rpi-backlight
 
 https://github.com/Uberi/speech_recognition
