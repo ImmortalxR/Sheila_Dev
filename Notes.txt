@@ -1,0 +1,6 @@
+Audio Config:
+
+-Latest version of Stretch for RPi
+-Mic audio goes through external sound card
+-Sound output goes through RPi via bluetooth
+-Dependencies file is now working correctly
