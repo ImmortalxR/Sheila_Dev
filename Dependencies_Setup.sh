@@ -18,5 +18,11 @@ pip install google-api-python-client
 pip install monotonic
 sudo apt-get install flac
 
+#Move the rpi backlight dependency file to the correct location
+sudo cp backlight-permissions.rules /etc/udev/rules.d/backlight-permissions.rules
+
+#Reboot to confirm updates
+sudo reboot
+
 #Will eventually add section to compile 
 #OPENCV2 when facial recognition is added again
